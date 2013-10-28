@@ -12,6 +12,8 @@ def view():
     d.title = 'Brad Janke'
     d.head += meta(name='viewport', content='width=device-width, initial-scale=1.0')
     d.head += link(rel='stylesheet', href=r'//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css')
+    d.head += script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+    d.head += script(src='//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js')
 
     container = div(a(name='top'), cls='container')
     nav = div(cls='navbar navbar-inverse', role='navigation')
@@ -45,8 +47,8 @@ def view():
         with div(cls='panel-body'):
             p('My name is Brad and I like building things. This site is about the applications I can build.')
             with div(cls='btn-group-vertical btn-group-md'):
-                button('github', cls='btn btn-primary', href='http://github.com/bradj')
-                button('bitbucket', cls='btn btn-primary', href='http://bitbucket.com/bradj')
+                a('github', cls='btn btn-primary', href='http://github.com/bradj', target='_new')
+                a('bitbucket', cls='btn btn-primary', href='http://bitbucket.org/bradj', target='_new')
 
     # resume
     resume = div(a(name='resume'), cls='panel panel-default')
