@@ -13,5 +13,4 @@ def index(request):
     v = Views()
     v.getView()
 
-server.add_static_route(r'/static/(.*)', 'static')
 server.run(static_path='static')
