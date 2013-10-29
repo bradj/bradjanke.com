@@ -1,19 +1,17 @@
-import tornado.ioloop
-import tornado.web
-from tornado.web import StaticFileHandler
-from views import index
+from pyy.web.tornado_simple_server import *
+from bradoc import Bradoc
+from pyy.html.tags import *
 
-class MainHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.write(index.view())
+from views.index import Views
 
-static_path = 'static'
+def testing():
+    div('here goes nothing')
 
-application = tornado.web.Application([ 
-    (r'/', MainHandler), 
-    (r'/static/(.*)', StaticFileHandler, {'path' : static_path})
-], gzip=True, static_path='static')
+@get('^/$')
+@Bradoc(title='Brad Janke')
+def index(request):
+    #doc = Bradoc(title='Brad Janke')
+    v = Views()
+    v.getView()    
 
-if __name__ == "__main__":
-    application.listen(8888)
-    tornado.ioloop.IOLoop.instance().start()
+server.run()
