@@ -10,8 +10,8 @@ def testing():
 @get('^/$')
 @Bradoc(title='Brad Janke')
 def index(request):
-    #doc = Bradoc(title='Brad Janke')
     v = Views()
-    v.getView()    
+    v.getView()
 
+server.add_static_route(r'/static/(.*)', 'static')
 server.run()
