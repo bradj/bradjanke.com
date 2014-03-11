@@ -10,7 +10,7 @@ class Views(object):
             self.header()
             self.about()
             self.resume()
-            self.contact()
+            #self.contact()
             self.footer()
 
     def topButton(self):
@@ -29,7 +29,7 @@ class Views(object):
                 with ul(cls='nav navbar-nav'):
                     li(a('About', href='#about'))
                     li(a('Resume', href='#resume'))
-                    li(a('Contact', href='#contact'))
+                    #li(a('Contact', href='#contact'))
 
     def header(self):
         header = div(cls='page-header')
@@ -44,9 +44,11 @@ class Views(object):
                 self.topButton()
             with div(cls='panel-body'):
                 p('My name is Brad and I like building things. This site is about the applications I can build.')
-                with div(cls='btn-group-vertical btn-group-md'):
-                    a('github', cls='btn btn-primary', href='http://github.com/bradj', target='_new')
-                    a('bitbucket', cls='btn btn-primary', href='http://bitbucket.org/bradj', target='_new')
+                with div(cls='btn-group-horizontal btn-group-lg'):
+                    with a(cls='btn btn-primary', href='http://github.com/bradj', target='_new'):
+                        i(cls='fa fa-github')
+                    with a(cls='btn btn-primary', href='http://bitbucket.org/bradj', target='_new'):
+                        i(cls='fa fa-bitbucket')
 
     def resume(self):
         resume = div(a(name='resume'), cls='panel panel-default')

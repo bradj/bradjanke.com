@@ -12,9 +12,12 @@ def view():
             p('Brentwood, TN')
 
             with ul(cls='list-group'):
+                li('Created JavaScript library that focuses on making regularly used patterns easy to implement as well as taking steps back from being too jQuery reliant.  The goal was to decrease development time.', cls="list-group-item")
+                li('Wrote test suites in Selenium using both the IDE and WebDriver API and created a test environment with Selenium nodes.  The tests were deployed to Selenium nodes and run periodically across multiple browsers.', cls="list-group-item")
                 li('Aided in creating a scheduling service that is used as application wide cron management. This is a multi threaded service which uses thread pooling to manage concurrent tasks. A usage example is scheduling a report to run at set increments.', cls="list-group-item")
                 li('UI/UX revamp of the entire application. This required creating project plans, client interaction, storyboarding, and requirements gathering while on a 2 week deliverable schedule.', cls="list-group-item")
                 li('Created a prototype of the next TitanCloud on AWS using MVC 4, WebAPI, Razor, and Bootstrap.', cls="list-group-item")
+                li('Aided in moving Titan\'s platform to AWS.', cls="list-group-item")
                 li('Moved Titan from svn to git.', cls="list-group-item")
 
         with div(cls='col-md-8'):

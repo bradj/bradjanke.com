@@ -7,6 +7,7 @@ class Bradoc(document):
 
         self.head += meta(name='viewport', content='width=device-width, initial-scale=1.0')
         self.head += link(rel='stylesheet', href=r'//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css')
+        self.head += link(rel='stylesheet', href=r'//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')
         self.head += script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
         self.head += script(src='//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js')
 

@@ -13,4 +13,4 @@ def index(request):
     v = Views()
     v.getView()
 
-server.run(static_path='static')
+server.run(static_path='static', debug=True)
