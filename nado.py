@@ -1,16 +1,21 @@
-from pyy.web.tornado_simple_server import *
+import tornado.ioloop
+import tornado.web
+
 from bradoc import Bradoc
-from pyy.html.tags import *
+
+class MainHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.write(Bradoc().render())
+
+application = tornado.web.Application([
+    (r"/", MainHandler),
+])
+
+if __name__ == "__main__":
+    application.listen(8888)
+    tornado.ioloop.IOLoop.instance().start()
+
+from bradoc import Bradoc
+from dominate.html.tags import *
 
 from views.index import Views
-
-def testing():
-    div('here goes nothing')
-
-@get('^/$')
-@Bradoc(title='Brad Janke')
-def index(request):
-    v = Views()
-    v.getView()
-
-server.run(static_path='static', debug=True)

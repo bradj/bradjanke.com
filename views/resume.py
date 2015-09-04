@@ -1,10 +1,33 @@
-import pyy.html
-from pyy.html.document import *
-from pyy.html.tags import *
+import dominate
+from dominate.document import *
+from dominate.tags import *
 
 def view():
     parent = div(cls='container')
     with parent:
+
+        with div(cls='col-md-8'):
+            h2('GISbiz')
+            h4('Senior Software Engineer')
+            p('Nashville, TN')
+
+            with ul(cls='list-group'):
+                li('Developed api for Geoorganizer product on Node.js, Redis, Postgres, and AWS. Deployments are handled by CodeDeploy and messaging is handled by RabbitMQ.', cls='list-group-item')
+                li('Created prototype for esri-leaflet using mithriljs', cls='list-group-item')
+                li('Automate deployment process of product to AWS using CodeDeploy and ArcPy', cls='list-group-item')
+                li('Creating web maps ArcGIS JavaScript on 10.0 - 10.3', cls='list-group-item')
+
+        with div(cls='col-md-8'):
+            h2('Geographic Information Services, Inc.')
+            h4('Senior Software Engineer')
+            p('Remote')
+
+            with ul(cls='list-group'):
+                li('Created GIS application using Knockout, ESRI JS, C# 4.5 and IIS.', cls="list-group-item")
+                li('Created custom query builder in JavaScript which allowed the user to pick fields and operators that are used to compare with custom input.', cls="list-group-item")
+                li('Developed and implemented custom search widget designed specifically for the clients map services.', cls="list-group-item")
+                li('Created auth system which allowed the map services to be secured.', cls="list-group-item")
+                li('Created custom print templates within ArcMap.', cls="list-group-item")
 
         with div(cls='col-md-8'):
             h2('Titan Cloud')

@@ -1,5 +1,6 @@
-from pyy.html import document
-from pyy.html.tags import *
+from dominate import document
+from dominate.tags import *
+from views.index import Views
 
 class Bradoc(document):
     def __init__(self, title='Brad Janke'):
@@ -12,3 +13,5 @@ class Bradoc(document):
         self.head += script(src='//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js')
 
         self.body['style'] = 'padding-top: 15px'
+
+        self.add(Views().getView())

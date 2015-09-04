@@ -1,17 +1,21 @@
-import pyy.html
-from pyy.html.document import *
-from pyy.html.tags import *
+import dominate
+from dominate.document import *
+from dominate.tags import *
 import resume as resumeview
 
 class Views(object):
     def getView(self):
-        with div(a(name='top'), cls='container'):
+        view = div(a(name='top'), cls='container')
+        
+        with view:
             self.navigation()
             self.header()
             self.about()
             self.resume()
-            #self.contact()
+            # self.contact()
             self.footer()
+
+        return view
 
     def topButton(self):
         return a('top', cls='btn btn-primary btn-xs pull-right', href='#top')
@@ -43,12 +47,15 @@ class Views(object):
             with div('About', cls='panel-heading'):
                 self.topButton()
             with div(cls='panel-body'):
-                p('My name is Brad and I like building things. This site is about the applications I can build.')
+                p('Hello! My name is Brad and I have been programming since I was a teenager. Currently, I am working for GISbiz in Nashville, TN.')
+                p('My focus is based around GIS applications written in JavaScript and/or Python. I speak web development.')
                 with div(cls='btn-group-horizontal btn-group-lg'):
                     with a(cls='btn btn-primary', href='http://github.com/bradj', target='_new'):
                         i(cls='fa fa-github')
+                        span('github')
                     with a(cls='btn btn-primary', href='http://bitbucket.org/bradj', target='_new'):
                         i(cls='fa fa-bitbucket')
+                        span('bitbucket')
 
     def resume(self):
         resume = div(a(name='resume'), cls='panel panel-default')
@@ -73,3 +80,4 @@ class Views(object):
             small('nginx')
             small(cls='glyphicon glyphicon-chevron-right')
             small('tornado')
+            
