@@ -1,0 +1,12 @@
+name = "simple"
+license = "MIT"
+licenselink = "https://github.com/vimux/blank/blob/master/LICENSE.md"
+description = "Simple theme"
+homepage = "http://bradjanke.com"
+tags = ["plain", "blank", "starter", "resume"]
+features = ["resume"]
+min_version = 0.1
+
+[author]
+  name = "Brad Janke"
+  homepage = "https://github.com/bradj"

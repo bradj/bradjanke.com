@@ -1,0 +1,4 @@
+baseurl = "http://bradjanke.com/"
+languageCode = "en-us"
+title = "Brad Janke's Résumé"
+theme = "simple"
