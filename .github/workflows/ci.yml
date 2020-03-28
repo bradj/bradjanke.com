@@ -1,0 +1,32 @@
+name: Build & Publish
+
+on:
+  push:
+
+jobs:
+  build-publish:
+    name: Build & Publish
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Get Hugo
+        run: |
+          wget https://github.com/gohugoio/hugo/releases/download/v0.68.3/hugo_0.68.3_Linux-64bit.tar.gz
+          tar xvf hugo_0.68.3_Linux-64bit.tar.gz
+
+      - name: Build
+        run: |
+          ./hugo -D
+
+      - name: Publish
+        run: |
+          aws s3 sync --acl public-read public/ s3://bradjanke.com/

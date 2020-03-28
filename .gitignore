@@ -1,6 +1,1 @@
-*.log
-*.pot
-*.pyc
-local_settings.py
-*.sublime-workspace
-bootstrap/
+public/
