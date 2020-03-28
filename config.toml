@@ -7,7 +7,7 @@ theme = "hugo-devresume-theme"
 
 [params]
     author = "Brad Janke"
-    description = "DevResume - Bootstrap 4 Resume/CV Template For Software Developers"
+    description = "Résumé of Brad Janke"
 
     primaryColor = "#2079c7"
     textPrimaryColor = "#292929"
