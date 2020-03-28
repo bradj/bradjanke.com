@@ -26,6 +26,7 @@ jobs:
       - name: Build
         run: |
           ./hugo -D
+          ls -la ~/.aws
 
       - name: Publish
         run: |
