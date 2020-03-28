@@ -11,6 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
+      - name: Get Hugo
+        run: |
+          wget https://github.com/gohugoio/hugo/releases/download/v0.68.3/hugo_0.68.3_Linux-64bit.tar.gz
+          tar xvf hugo_0.68.3_Linux-64bit.tar.gz
+          mv hugo /usr/local/bin
+
       - name: Hugo Build
-        uses: srt32/hugo-action@master
-        args: -D
+        run: |
+          hugo -D
