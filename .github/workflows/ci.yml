@@ -1,0 +1,16 @@
+name: Build & Publish
+
+on:
+  push:
+
+jobs:
+  build-test-publish:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Hugo Build
+        uses: srt32/hugo-action@master
+        args: -D
