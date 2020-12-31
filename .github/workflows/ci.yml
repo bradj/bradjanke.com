@@ -20,8 +20,8 @@ jobs:
 
       - name: Get Hugo
         run: |
-          wget https://github.com/gohugoio/hugo/releases/download/v0.68.3/hugo_0.68.3_Linux-64bit.tar.gz
-          tar xvf hugo_0.68.3_Linux-64bit.tar.gz
+          wget https://github.com/gohugoio/hugo/releases/download/v0.80.0/hugo_0.80.0_Linux-64bit.tar.gz
+          tar xvf hugo_0.80.0_Linux-64bit.tar.gz
 
       - name: Build
         run: |
