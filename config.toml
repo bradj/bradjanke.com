@@ -15,7 +15,7 @@ theme = "hugo-devresume-theme"
     [params.profile]
         enable = true
         name = "Brad Janke"
-        tagline = "Senior Engineer"
+        tagline = "Senior Software Engineer"
         avatar = "headshot.jpg"
 
     [params.contact]
@@ -39,24 +39,92 @@ theme = "hugo-devresume-theme"
         enable = true
 
         [[params.skills.list]]
-        title = "Development"
+        title = "Languages"
         [[params.skills.list.items]]
         details = "Python"
         [[params.skills.list.items]]
-        details = "JavaScript / Node.js"
+        details = "JavaScript"
         [[params.skills.list.items]]
-        details = "GitHub Actions"
+        details = "Golang"
+        [[params.skills.list.items]]
+        details = "C#"
+
+        [[params.skills.list]]
+        title = "AWS"
+        [[params.skills.list.items]]
+        details = "Lambda"
+        [[params.skills.list.items]]
+        details = "RDS"
+        [[params.skills.list.items]]
+        details = "ECS - Farget & EC2"
+        [[params.skills.list.items]]
+        details = "ECR"
+        [[params.skills.list.items]]
+        details = "SNS"
+        [[params.skills.list.items]]
+        details = "SQS"
+        [[params.skills.list.items]]
+        details = "IAM"
+        [[params.skills.list.items]]
+        details = "CloudWatch"
+        [[params.skills.list.items]]
+        details = "S3"
+        [[params.skills.list.items]]
+        details = "Route53"
+        [[params.skills.list.items]]
+        details = "CloudFront"
+        [[params.skills.list.items]]
+        details = "EC2"
+        [[params.skills.list.items]]
+        details = "Textract"
+        [[params.skills.list.items]]
+        details = "WAF"
+        [[params.skills.list.items]]
+        details = "Secrets Manager"
+
+        [[params.skills.list]]
+        title = "Azure"
+        [[params.skills.list.items]]
+        details = "App Services"
+        [[params.skills.list.items]]
+        details = "Function Apps"
+        [[params.skills.list.items]]
+        details = "Databricks"
+        [[params.skills.list.items]]
+        details = "Data Factory"
+        [[params.skills.list.items]]
+        details = "Storage Queues"
+        [[params.skills.list.items]]
+        details = "CosmosDB"
+        [[params.skills.list.items]]
+        details = "AKS"
+        [[params.skills.list.items]]
+        details = "ACR"
+        [[params.skills.list.items]]
+        details = "Azure Active Directory"
+        [[params.skills.list.items]]
+        details = "App Insights"
+        [[params.skills.list.items]]
+        details = "Log Analytics"
+        [[params.skills.list.items]]
+        details = "Event Hub"
+        [[params.skills.list.items]]
+        details = "Send Grid"
+        [[params.skills.list.items]]
+        details = "Logic Apps"
+        [[params.skills.list.items]]
+        details = "Storage Accounts"
+        [[params.skills.list.items]]
+        details = "IAM"
 
         [[params.skills.list]]
         title = "Infrastructure"
         [[params.skills.list.items]]
-        details = "AWS EC2 / ECS / Fargate / ECR"
+        details = "Terraform"
         [[params.skills.list.items]]
-        details = "IAM"
+        details = "AWS CDK"
         [[params.skills.list.items]]
         details = "Docker"
-        [[params.skills.list.items]]
-        details = "Terraform"
         [[params.skills.list.items]]
         details = "Ansible"
         [[params.skills.list.items]]
@@ -65,25 +133,15 @@ theme = "hugo-devresume-theme"
         details = "Vault"
         [[params.skills.list.items]]
         details = "Jenkins"
-        [[params.skills.list.items]]
-        details = "Route53"
-        [[params.skills.list.items]]
-        details = "AWS SSM"
 
         [[params.skills.list]]
         title = "Data"
         [[params.skills.list.items]]
-        details = "RDS / Aurora"
-        [[params.skills.list.items]]
-        details = "SNS"
-        [[params.skills.list.items]]
-        details = "SQS"
-        [[params.skills.list.items]]
-        details = "S3"
-        [[params.skills.list.items]]
-        details = "MySQL"
+        details = "MongoDB"
         [[params.skills.list.items]]
         details = "PostgreSQL"
+        [[params.skills.list.items]]
+        details = "MySQL"
 
     [params.education]
         enable = false
@@ -137,6 +195,36 @@ theme = "hugo-devresume-theme"
 
     [params.experience]
         enable = true
+
+        [[params.experience.list]]
+        title = "Lead Software Engineer - Contract"
+        dates = "June 2020 - Present"
+        company = "Optum"
+        details = "Designed and led the implementation of a new Event Driven PII Data Ingestion and Validation solution in Azure. This solution utilizes Data Factory to orchestrate Databricks and Azure Functions to run preliminary validation pipelines. Data Factory pipelines are generated from client configurations. Client configurations are managed by non-technical users so engineering time is spent on the platform."
+        [[params.experience.list.items]]
+        details = "Implemented serverless validation pipeline using Azure Function Apps. Pipeline is triggered by Storage events. Monitored via Log Analytics and App Insights."
+        [[params.experience.list.items]]
+        details = "File level validation is performed across several batches where each batch can consist of 100s of GB of data"
+        [[params.experience.list.items]]
+        details = "Spark jobs handles row level validation so that we can more easily distribute load across the Azure Databricks cluster"
+        [[params.experience.list.items]]
+        details = "All Azure infrastructure is managed by Terraform"
+        [[params.experience.list.items]]
+        details = "Acted as Scrum Master, Project Manager, and Engineering Lead on a team of 5"
+
+        [[params.experience.list]]
+        title = "Consultant"
+        dates = "March 2020 - August 2020"
+        company = "Fielda"
+        details = "I started with the goal of managing their application infra from Terraform on AWS. They had a mix of manual and automated steps but hadn't completely committed to an IaC direction. I was able to accomplish the following:"
+        [[params.experience.list.items]]
+        details = "Migrated applications away from bare EC2 instances into ECS Fargate"
+        [[params.experience.list.items]]
+        details = "Migrated CICD pipelines from Jenkins into Github Actions which pushed to ECR"
+        [[params.experience.list.items]]
+        details = "Configured CloudWatch alarms and Dashboards to show and alert on metrics that matter"
+        [[params.experience.list.items]]
+        details = "Using Terraform, they're now able to stand up a completely new environment running in a completely new AWS account in under 30 minutes. This process allows them to add ephemeral environments into their workflow, on infra that mirrors their production environment, while allowing the engineering work to continue uninterrupted on their regular development & staging environments."
 
         [[params.experience.list]]
         title = "Senior Backend Engineer"
