@@ -1,355 +1,58 @@
-baseurl = "http://bradjanke.com/"
-languageCode = "en-us"
+baseurl = "https://bradjanke.com/"
 title = "Brad Janke"
-# theme = "simple"
-theme = "hugo-devresume-theme"
-# googleAnalytics = "UA-XXXXXXX-Y"
+theme = "pulp"
+canonifyurls = true
+hasCJKLanguage = true
+# pygmentsCodefences = true
+# pygmentsUseClasses = true
+# googleAnalytics = "{your tracking code}"
+
+[markup.goldmark.renderer]
+    unsafe = false # Allow user HTML tags
 
 [params]
     author = "Brad Janke"
-    description = "Résumé of Brad Janke"
+    avatar = "headshot.jpg"
+    # avatarDescription = "My avatar description"
+    favicon = "favicon.ico"
+    description = """
+        Infrastructure, ramblings, and software.
 
-    primaryColor = "#2079c7"
-    textPrimaryColor = "#292929"
+    """
+    publicationYear = "2022"
+    # listPageDateFormat = "January, 2006" # See https://gohugo.io/functions/format/
+    # singlePageDateFormat = "January 2, 2006"
+    # custom_css = ["/css/custom.css"]
+    # custom_js = ["/js/custom.js"]
 
-    [params.profile]
-        enable = true
-        name = "Brad Janke"
-        tagline = "Senior Software Engineer"
-        avatar = "headshot.jpg"
+# Make sure setting a following option for search bar to work
+[outputs]
+    section = ["JSON", "HTML"]
+    term = ["JSON", "HTML"]
 
-    [params.contact]
-        enable = true
-        location = "Nashville, TN"
+[[menu.main]]
+    identifier = "about"
+    # name = "Blog" #If display text link, cancel comment out
+    pre = "<i class='fa fa-info-circle fa-lg'></i>" #Choose your favorite font from Font Awesome
+    url = "/about/"
+    weight = 10
 
-        [[params.contact.list]]
-        icon = "fab fa-keybase"
-        url = "https://keybase.io/bradj"
-        text = "bradj"
-        [[params.contact.list]]
-        icon = "fab fa-twitter"
-        url = "https://twitter.com/bradjanke"
-        text = "bradjanke"
-        [[params.contact.list]]
-        icon = "fab fa-linkedin"
-        url = "https://www.linkedin.com/in/bradjanke/"
-        text = "Brad Janke"
+[[menu.main]]
+    identifier = "github"
+    # name = "GitHub"
+    pre = "<i class='fab fa-github fa-lg'></i>"
+    url = "https://github.com/bradj"
+    weight = 20
 
-    [params.skills]
-        enable = true
+[[menu.main]]
+    identifier = "keybase"
+    pre = "<i class='fab fa-keybase fa-lg'></i>"
+    url = "https://keybase.io/bradj"
+    weight = 30
 
-        [[params.skills.list]]
-        title = "Languages"
-        [[params.skills.list.items]]
-        details = "Python"
-        [[params.skills.list.items]]
-        details = "JavaScript"
-        [[params.skills.list.items]]
-        details = "Golang"
-        [[params.skills.list.items]]
-        details = "C#"
-
-        [[params.skills.list]]
-        title = "AWS"
-        [[params.skills.list.items]]
-        details = "Lambda"
-        [[params.skills.list.items]]
-        details = "RDS"
-        [[params.skills.list.items]]
-        details = "ECS - Farget & EC2"
-        [[params.skills.list.items]]
-        details = "ECR"
-        [[params.skills.list.items]]
-        details = "SNS"
-        [[params.skills.list.items]]
-        details = "SQS"
-        [[params.skills.list.items]]
-        details = "IAM"
-        [[params.skills.list.items]]
-        details = "CloudWatch"
-        [[params.skills.list.items]]
-        details = "S3"
-        [[params.skills.list.items]]
-        details = "Route53"
-        [[params.skills.list.items]]
-        details = "CloudFront"
-        [[params.skills.list.items]]
-        details = "EC2"
-        [[params.skills.list.items]]
-        details = "Textract"
-        [[params.skills.list.items]]
-        details = "WAF"
-        [[params.skills.list.items]]
-        details = "Secrets Manager"
-
-        [[params.skills.list]]
-        title = "Azure"
-        [[params.skills.list.items]]
-        details = "App Services"
-        [[params.skills.list.items]]
-        details = "Function Apps"
-        [[params.skills.list.items]]
-        details = "Databricks"
-        [[params.skills.list.items]]
-        details = "Data Factory"
-        [[params.skills.list.items]]
-        details = "Storage Queues"
-        [[params.skills.list.items]]
-        details = "CosmosDB"
-        [[params.skills.list.items]]
-        details = "AKS"
-        [[params.skills.list.items]]
-        details = "ACR"
-        [[params.skills.list.items]]
-        details = "Azure Active Directory"
-        [[params.skills.list.items]]
-        details = "App Insights"
-        [[params.skills.list.items]]
-        details = "Log Analytics"
-        [[params.skills.list.items]]
-        details = "Event Hub"
-        [[params.skills.list.items]]
-        details = "Send Grid"
-        [[params.skills.list.items]]
-        details = "Logic Apps"
-        [[params.skills.list.items]]
-        details = "Storage Accounts"
-        [[params.skills.list.items]]
-        details = "IAM"
-
-        [[params.skills.list]]
-        title = "Infrastructure"
-        [[params.skills.list.items]]
-        details = "Terraform"
-        [[params.skills.list.items]]
-        details = "AWS CDK"
-        [[params.skills.list.items]]
-        details = "Docker"
-        [[params.skills.list.items]]
-        details = "Ansible"
-        [[params.skills.list.items]]
-        details = "Confd"
-        [[params.skills.list.items]]
-        details = "Vault"
-        [[params.skills.list.items]]
-        details = "Jenkins"
-
-        [[params.skills.list]]
-        title = "Data"
-        [[params.skills.list.items]]
-        details = "MongoDB"
-        [[params.skills.list.items]]
-        details = "PostgreSQL"
-        [[params.skills.list.items]]
-        details = "MySQL"
-
-    [params.education]
-        enable = false
-
-        [[params.education.list]]
-        degree = "MSc in Computer Science"
-        university = "University College London"
-        dates = "2010 - 2011"
-        [[params.education.list]]
-        degree = "BSc Maths and Physics"
-        university = "Imperial College London"
-        dates = "2007 - 2010"
-
-    [params.awards]
-        enable = false
-
-        [[params.awards.list]]
-        name = "Award Lorem Ipsum"
-        body = "Microsoft lorem ipsum"
-        date = "2019"
-        [[params.awards.list]]
-        name = "Award Donec Sodales"
-        body = "Oracle Aenean"
-        date = "2017"
-
-    [params.languages]
-        enable = false
-
-        [[params.languages.list]]
-        name = "English"
-        level = "Native"
-        [[params.languages.list]]
-        name = "Spanish"
-        level = "Professional"
-
-    [params.interests]
-        enable = false
-
-        [[params.interests.list]]
-        name = "Music"
-        [[params.interests.list]]
-        name = "Programming"
-        [[params.interests.list]]
-        name = "Gaming"
-        [[params.interests.list]]
-        name = "Travelling"
-
-    [params.summary]
-        enable = true
-        text = "Focused on engineering productivity, workflow automation, and operational efficiency. I strive to automate away repetitive tasks and streamline engineering workflows by providing simple solutions to complex tasks."
-
-    [params.experience]
-        enable = true
-
-        [[params.experience.list]]
-        title = "Lead Software Engineer - Contract"
-        dates = "June 2020 - Present"
-        company = "Optum"
-        details = "Designed and led the implementation of a new Event Driven PII Data Ingestion and Validation solution in Azure. This solution utilizes Data Factory to orchestrate Databricks and Azure Functions to run preliminary validation pipelines. Data Factory pipelines are generated from client configurations. Client configurations are managed by non-technical users so engineering time is spent on the platform."
-        [[params.experience.list.items]]
-        details = "Implemented serverless validation pipeline using Azure Function Apps. Pipeline is triggered by Storage events. Monitored via Log Analytics and App Insights."
-        [[params.experience.list.items]]
-        details = "File level validation is performed across several batches where each batch can consist of 100s of GB of data"
-        [[params.experience.list.items]]
-        details = "Spark jobs handles row level validation so that we can more easily distribute load across the Azure Databricks cluster"
-        [[params.experience.list.items]]
-        details = "All Azure infrastructure is managed by Terraform"
-        [[params.experience.list.items]]
-        details = "Acted as Scrum Master, Project Manager, and Engineering Lead on a team of 5"
-
-        [[params.experience.list]]
-        title = "Consultant"
-        dates = "March 2020 - August 2020"
-        company = "Fielda"
-        details = "I started with the goal of managing their application infra from Terraform on AWS. They had a mix of manual and automated steps but hadn't completely committed to an IaC direction. I was able to accomplish the following:"
-        [[params.experience.list.items]]
-        details = "Migrated applications away from bare EC2 instances into ECS Fargate"
-        [[params.experience.list.items]]
-        details = "Migrated CICD pipelines from Jenkins into Github Actions which pushed to ECR"
-        [[params.experience.list.items]]
-        details = "Configured CloudWatch alarms and Dashboards to show and alert on metrics that matter"
-        [[params.experience.list.items]]
-        details = "Using Terraform, they're now able to stand up a completely new environment running in a completely new AWS account in under 30 minutes. This process allows them to add ephemeral environments into their workflow, on infra that mirrors their production environment, while allowing the engineering work to continue uninterrupted on their regular development & staging environments."
-
-        [[params.experience.list]]
-        title = "Senior Backend Engineer"
-        dates = "February 2019 - March 2020"
-        company = "LiveSchool"
-        details = "While at LiveSchool my goal was to improve our engineering workflows. I focused on automation and operational efficiency of the CI/CD stack and its supporting services.\n\n Built infrastructure for managing build pipelines. Implemented Config and Secret management; killed our self hosted Jenkins cluster by moving to Github Actions for builds and versioned artifacts.\n\n Developed tooling to automate infrastructure operations. Created a Platform with VPN that’s home to our engineering tools and an Admin Panel to manage environments; infra managed with Terraform; reduced  cost and maintenance by transitioning to Serverless architecture."
-        [[params.experience.list.items]]
-        details = "Reduced end of year School Rollovers from >60 minute execution times to <10 minutes by porting PHP into serverless Node and optimizing the database to better support the Rollover queries. Implemented a UI for Rollovers that gives immediate feedback  on the status of past and currently processing Rollover operations."
-        [[params.experience.list.items]]
-        details = "Implemented config management using confd and AWS SSM. Containers now hydrate configs on startup. Managed IAM Roles and Policies via Terraform to control Parameter Store access."
-        [[params.experience.list.items]]
-        details = "Switching environments at LiveSchool was time consuming so I researched what features engineering used most, ported those into the Admin Panel that lives within the engineering Platform, and provided access across all environments so that engineers can quickly pivot across environments."
-
-        [[params.experience.list]]
-        title = "Senior DevOps Consultant"
-        dates = "October 2018 - February 2019"
-        company = "Contino"
-        details = "Worked onsite within a team of four in Dallas, TX to help guide an organization into AWS. The team  worked with engineers and managers to discover shortcomings and implement both cultural and technical changes to ease the transition into AWS."
-        [[params.experience.list.items]]
-        details = "Created a generic Jenkins build process that gave AppDev teams a path to follow while migrating their applications and builds. This process handled static code analysis, unit & integration tests, tagging & versioning, and pushing artifacts to private registries."
-        [[params.experience.list.items]]
-        details = "Demonstrated how one could integrate Docker into everyday workflows by having your application containerized. These demonstrations paired well  with showing off the new Jenkins pipeline by simultaneously demonstrating automatic builds & tests mixed with ready to deploy artifacts."
-
-        [[params.experience.list]]
-        title = "Platform Engineer"
-        dates = "October 2016 - September 2018"
-        company = "Rackspace"
-        details = "Operated within the Developer Services team in a 100% remote organization. I worked on a team of around 35 engineers while acting as product owner of the CLI and SDK’s for the Trebuchet Platform as a Service on Kubernetes. My focus was entirely on simplifying developer workflows through automation."
-        [[params.experience.list.items]]
-        details = "Helped create “one-click” deployment CLI (Splat) which provided an entry point into app orchestration by allowing users to generate custom application footprints by choosing their tech stack. Splat supported several stacks such as Python, JS, GO, and Ruby as well as in-memory, nosql,  and/or relational databases."
-        [[params.experience.list.items]]
-        details = "The CLI for the Trebuchet Platform was automatically generated from Swagger specs. This automation allowed me to quickly update the CLI based on upstream service changes. Each service that wanted to be consumed via the CLI could add a snippet in their build process that would trigger the CLI to be rebuilt and consume any changes done to the service interface."
-
-        [[params.experience.list]]
-        title = "Consultant (Front End)"
-        dates = "April 2016 - August 2016"
-        company = "Change Healthcare"
-        details = "Focused on front end development with React."
-        [[params.experience.list.items]]
-        details = "Development lead for new features. I was in charge of redesigning old components to new emitter patterns. The application followed the Flux pattern which employs a catch all mentality. We decided an explicit event based approach is a better fit for our purposes. I was lead on new development with this pattern."
-
-        [[params.experience.list]]
-        title = "Senior Software Engineer"
-        dates = "October 2014 - April 2016"
-        company = "Kanini"
-        details = "Designed and implemented application infrastructure using AWS. The infrastructure would automatically handle scaling, backups of logs and data, and daily reports."
-        [[params.experience.list.items]]
-        details = "Created multi-tenant API in Node.js. This API is in charge of handling every transaction from mobile and  web apps. It sits on top of Postgres, Redis, and RabbitMQ."
-
-        [[params.experience.list]]
-        title = "Senior Software Engineer - Consultant"
-        dates = "April 2014 - September 2014"
-        company = "GISi"
-        details = "Built geospatial solutions with ESRI’s ArcGIS Desktop and JavaScript libraries"
-
-        [[params.experience.list]]
-        title = "Senior Software Engineer"
-        dates = "April 2013 - April 2014"
-        company = "Titan Cloud"
-        details = ""
-
-        [[params.experience.list]]
-        title = "Software Engineer"
-        dates = "April 2010 - April 2013"
-        company = "Kanini"
-        details = "Created several GIS solutions using ESRI & Mapbox"
-
-        [[params.experience.list]]
-        title = "Software Engineer"
-        dates = "September 2007 - February 2010"
-        company = "PlantCML"
-        details = "Designed and implemented high throughput SMS gateway to simultaneously process millions of messages"
-
-
-    [params.projects]
-        enable = false
-
-        [[params.projects.list]]
-        title = "Project Lorem Ipsum"
-        meta = "Open Source"
-        tagline = "You can use this section for your side projects. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-
-        [[params.projects.list]]
-        title = "Project Sed Fringilla"
-        meta = "Open Source"
-        tagline = "You can use this section for your side projects. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim."
-
-        [[params.projects.list]]
-        title = "Project Praesent"
-        meta = "Open Source"
-        tagline = "You can use this section for your side projects. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim."
-
-    [params.information]
-        enable = false
-
-        [[params.information.list]]
-        title = "Papers"
-        [[params.information.list.items]]
-        details = "2018 · Lorem Ipsum"
-        [[params.information.list.items]]
-        details = "2016 · Sed Fringilla"
-
-        [[params.information.list]]
-        title = "Interests"
-        details = "Climbing, Snowboarding, Photography, Travelling"
-
-    [params.social]
-        enable = true
-
-        [[params.social.list]]
-        icon = "fab fa-github"
-        url = "//github.com/bradj"
-        title = "bradj"
-        [[params.social.list]]
-        icon = "fab fa-keybase"
-        url = "https://keybase.io/bradj"
-        title = "bradj"
-        [[params.social.list]]
-        icon = "fab fa-linkedin"
-        url = "//linkedin.com/in/bradjanke"
-        title = "bradjanke"
-        [[params.social.list]]
-        icon = "fab fa-twitter"
-        url = "//twitter.com/bradjanke"
-        title = "@bradjanke"
-
-    [params.footer]
-        copyright = ""
+[[menu.main]]
+    identifier = "twitter"
+    # name = "Twitter"
+    pre = "<i class='fab fa-twitter fa-lg'></i>"
+    url = "https://twitter.com/bradjanke"
+    weight = 30

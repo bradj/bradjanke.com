@@ -20,8 +20,8 @@ jobs:
 
       - name: Get Hugo
         run: |
-          wget https://github.com/gohugoio/hugo/releases/download/v0.80.0/hugo_0.80.0_Linux-64bit.tar.gz
-          tar xvf hugo_0.80.0_Linux-64bit.tar.gz
+          wget https://github.com/gohugoio/hugo/releases/download/v0.92.0/hugo_0.92.0_Linux-64bit.tar.gz
+          tar xvf hugo_0.92.0_Linux-64bit.tar.gz
 
       - name: Build
         run: |
@@ -29,4 +29,4 @@ jobs:
 
       - name: Publish
         run: |
-          aws s3 sync --acl public-read public/ s3://bradjanke.com/
+          aws s3 sync --acl public-read public/ s3://mtn-bradjanke-com-origin/
