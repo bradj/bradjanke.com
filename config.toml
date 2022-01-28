@@ -32,27 +32,28 @@ hasCJKLanguage = true
 
 [[menu.main]]
     identifier = "about"
-    # name = "Blog" #If display text link, cancel comment out
-    pre = "<i class='fa fa-info-circle fa-lg'></i>" #Choose your favorite font from Font Awesome
+    name = "about" #If display text link, cancel comment out
+    pre = "<i class='fa fa-user fa-lg'></i>" #Choose your favorite font from Font Awesome
     url = "/about/"
     weight = 10
 
 [[menu.main]]
     identifier = "github"
-    # name = "GitHub"
+    name = "github"
     pre = "<i class='fab fa-github fa-lg'></i>"
     url = "https://github.com/bradj"
     weight = 20
 
 [[menu.main]]
     identifier = "keybase"
+    name = "keybase"
     pre = "<i class='fab fa-keybase fa-lg'></i>"
     url = "https://keybase.io/bradj"
     weight = 30
 
 [[menu.main]]
     identifier = "twitter"
-    # name = "Twitter"
+    name = "twitter"
     pre = "<i class='fab fa-twitter fa-lg'></i>"
     url = "https://twitter.com/bradjanke"
     weight = 30
