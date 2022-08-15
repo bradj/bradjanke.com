@@ -1,8 +1,9 @@
 ---
 title: "About"
-# date: 2022-01-26T00:40:24-06:00
+date: 2022-01-26T00:40:24-06:00
 draft: false
 tags: []
+comments: false
 ---
 
 Hi. I'm Brad. I started toying with computers in the early 90's which morphed into building and maintaining them and eventually IT support during middle school. From there I jumped over to writing scripts (mIRC bots, anyone?) and apps with Windows Forms which cleared the path for where I am today. Over the last 13 years I've managed racks of servers, been a full stack dev and traveling DevOps engineer. I began my cloud journey with AWS in 2010 while dipping my toes in DigitalOcean and Azure along the way. Currently, I'm working on my own product with the goal that it generates _any_ revenue.
