@@ -5,14 +5,34 @@ draft: false
 tags: []
 ---
 
-Hi. I'm Brad. I started toying with computers in the early 90's which morphed into building and maintaining them and eventually IT support during middle school. From there I jumped over to writing scripts (mIRC bots, anyone?) and apps with Windows Forms which cleared the path for where I am today. Over the last 13 years I've managed racks of servers, been a full stack dev and traveling DevOps engineer. I began my cloud journey with AWS in 2010 while dipping my toes in DigitalOcean and Azure along the way. Currently, I'm working on my own product with the goal that it generates _any_ revenue.
+Hi. I'm Brad. I'm a Lead Engineer with over 13 years of experience and a passion for workflow automation. I enjoy replacing manual and repetitive tasks with elegant and maintainable solutions, delivering quality products to end users that make their lives measurably simpler, and solving problems with my peers. I have a notable mix of full stack and cloud/infra management experience which allows me to be productive across an entire stack.
 
 # Experience
 
-## MTN Development - Owner
-February 2017 - Current
+## [zLifecycle](https://www.zlifecycle.com/) - Lead Engineer
+April 2022 - Current
 
-**MTN Development** is just me. I started it to track consulting under a single entity.
+**zLifecycle** is a SaaS offering that helps make cloud environment management easy. Being the sole engineer led me to massively automate the entire SDLC process to improve efficiency and remove overhead, taking the deploy process from over 1 hour of manual work to fully automated jobs that complete in 3 minutes:
+
+* Redesigned our architecture to be multi-tenant. 
+* Implemented design decisions across several backend web services, k8s operator, Argo CD, React web app, and database schema.
+* As part of the redesign, replaced a self-managed Dex IdP in favor of a hands off approach with Auth0.
+* Replaced time consuming and manual build and deployment procedures with Github Actions across all app repos. 
+* Created Helm chart git repo to bring charts to a single location. Create build action for each chart. 
+* Automated collection of the latest semver for apps, charts, and TF modules allowing me to quickly get the latest artifacts running in our test environment.
+* Our deployment process once took an hour or more and now it's <3m.
+
+
+## MTN Development - Owner
+February 2017 - Ongoing
+
+I created MTN as a consulting umbrella. While working as a consultant I've been able to accomplish the following:
+
+* Worked on open source Terraform modules and cloud transformation to AWS during a stint at [Cloud Posse](https://github.com/cloudposse/)
+* Simultaneously managed relationships with several clients which involved outlining problem areas, creating resolution plans, and executing on my own or while guiding client engineers.
+* Projects largely revolved around AWS infrastructure management via Terraform.
+* Clients typically had no or little TF experience which allowed me to provide TF training while delivering solutions.
+* Focused on fragmented or non-existent CICD pipelines (mostly Jenkins and Github Actions) with the goal of eliminating as many manual steps as possible.
 
 ## Optum - Lead Software Engineer
 June 2020 - February 2021
