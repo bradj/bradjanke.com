@@ -5,23 +5,21 @@ draft: false
 tags: []
 ---
 
-Hi. I'm Brad. I'm a Lead Engineer with over 13 years of experience and a passion for workflow automation. I enjoy replacing manual and repetitive tasks with elegant and maintainable solutions, delivering quality products to end users that make their lives measurably simpler, and solving problems with my peers. I have a notable mix of full stack and cloud/infra management experience which allows me to be productive across an entire stack.
+Hi. I'm Brad. I'm a Lead Engineer with over 13 years of experience and a passion for workflow automation. I enjoy replacing manual and repetitive tasks with maintainable solutions, delivering quality products to end users that make their lives measurably simpler, and solving problems with my peers. I have a notable mix of full stack and cloud/infra management experience which allows me to be productive across an entire stack.
 
 # Experience
 
-## [zLifecycle](https://www.zlifecycle.com/) - Lead Engineer
+## CloudKnit - Founding Engineer
 April 2022 - Current
 
-**zLifecycle** is a SaaS offering that helps make cloud environment management easy. Being the sole engineer led me to massively automate the entire SDLC process to improve efficiency and remove overhead, taking the deploy process from over 1 hour of manual work to fully automated jobs that complete in 3 minutes:
+**CloudKnit** is a SaaS offering that helps make cloud environment management easy.  I automated the entire SDLC process for faster deployment which took the deploy process from over 1 hour to ~5 minutes:
 
-* Redesigned our architecture to be multi-tenant. 
-* Implemented design decisions across several backend web services, k8s operator, Argo CD, React web app, and database schema.
-* As part of the redesign, replaced a self-managed Dex IdP in favor of a hands off approach with Auth0.
-* Replaced time consuming and manual build and deployment procedures with Github Actions across all app repos. 
-* Created Helm chart git repo to bring charts to a single location. Create build action for each chart. 
-* Automated collection of the latest semver for apps, charts, and TF modules allowing me to quickly get the latest artifacts running in our test environment.
-* Our deployment process once took an hour or more and now it's <3m.
-
+* Redesigned architecture to be multi-tenant
+* Implemented design decisions across all layers of the system: backend web services, k8s operator, Argo CD, React web app, and database
+* As part of the redesign, replaced a self-managed Dex IdP with hands-off Auth0
+* Replaced time consuming deployments with Github Actions across all app repos 
+* Automated Helm chart deployments
+* Designed and implemented account self-registration
 
 ## MTN Development - Owner
 February 2017 - Ongoing
@@ -29,16 +27,16 @@ February 2017 - Ongoing
 I created MTN as a consulting umbrella. While working as a consultant I've been able to accomplish the following:
 
 * Worked on open source Terraform modules and cloud transformation to AWS during a stint at [Cloud Posse](https://github.com/cloudposse/)
-* Simultaneously managed relationships with several clients which involved outlining problem areas, creating resolution plans, and executing on my own or while guiding client engineers.
-* Projects largely revolved around AWS infrastructure management via Terraform.
-* Clients typically had no or little TF experience which allowed me to provide TF training while delivering solutions.
-* Focused on fragmented or non-existent CICD pipelines (mostly Jenkins and Github Actions) with the goal of eliminating as many manual steps as possible.
+* Simultaneously managed relationships with several clients which involved outlining problem areas, creating resolution plans, and executing on my own or while guiding client engineers
+* Projects largely revolved around AWS infrastructure management via Terraform
+* Clients typically had no or little Terraform experience which allowed me to provide Terraform training while delivering solutions
+* Focused on fragmented or non-existent CICD pipelines (mostly Jenkins and Github Actions) with the goal of automating as much as possible
 
 ## Optum - Lead Software Engineer
 June 2020 - February 2021
 
 * Designed and led the implementation of a new Event Driven PII Data Ingestion and Validation solution in Azure. This solution utilizes Data Factory to orchestrate Databricks and Azure Functions to run preliminary validation pipelines. Data Factory pipelines are generated from client configurations. Client configurations are managed by non-technical users so engineering time is spent on the platform.
-* Implemented serverless validation pipeline using Azure Function Apps. Pipeline is triggered by Storage events. Monitored via Log Analytics and App Insights.
+* Implemented serverless validation pipeline using Azure Function Apps. Pipeline is triggered by Storage events. Monitored via Log Analytics and App Insights
 * File level validation is performed across several batches where each batch can consist of 100s of GB of data
 * Spark jobs handles row level validation so that we can more easily distribute load across the Azure Databricks cluster
 * All Azure infrastructure is managed by Terraform
