@@ -14,9 +14,9 @@ March 2023 - Present
 
 My goal at Kanini is to create a mature Cloud Engineering practice by upskilling Kanini engineers, propagating best practices through reusable modules, writing playbooks, and deliver value to clients.
 
-- Created an internal engineering site with JD's, interview templates and procedures, playbooks, repo locations, and onboarding docs in order to organize engineering and upskilling efforts
-- Built a subscription vending pipeline via Terraform that allows Kanini engineers to request a new Azure subscription via GitHub PR in order for engineers to test and hone their Azure skills via sandbox
-- Corrected struggling engagements due to lack of Cloud Engineering knowledge. Jumped on stand-ups, got with clients to highlight gaps, trained Kanini engineers on appropriate solutions (mostly through teaching Terraform, AWS, and how to build or modify existing pipelines).
+- Worked with leadership & the recruitment team to identify hiring needs, define interview process and create onboarding docs
+- Built an Azure subscription vending pipeline using GitOps, Terraform etc. for Kanini engineering team instead of previously manual/ticket based process
+- Worked with various engagements as a subject matter expert in Cloud Engineering to identify any gaps, provide training & do the needful to bring struggling projects back on track
 
 ## CloudKnit - Founding Engineer
 April 2022 - March 2023
