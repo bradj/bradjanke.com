@@ -1,0 +1,50 @@
+# Custom social.yml using Simple Icons for all social networks
+
+# GitHub
+github:
+  Weight: 1
+  Prefix: https://github.com/
+  Title: GitHub
+  Icon:
+    Simpleicons: github
+
+# Bluesky
+bluesky:
+  Weight: 10
+  Prefix: https://bsky.app/profile/
+  Title: Bluesky
+  Icon:
+    Simpleicons: bluesky
+
+# Keybase
+keybase:
+  Weight: 20
+  Prefix: https://keybase.io/
+  Title: Keybase
+  Icon:
+    Simpleicons: keybase
+
+# Email
+email:
+  Weight: 30
+  Template: mailto:%v
+  Title: Email
+  Icon:
+    Simpleicons: gmail
+
+# Mastodon
+mastodon:
+  Weight: 31
+  Prefix: https://fosstodon.org/@
+  Title: Mastodon
+  Icon:
+    Simpleicons: mastodon
+
+# RSS
+rss:
+  Weight: 40
+  Url: /index.xml
+  Title: RSS
+  Newtab: true
+  Icon:
+    Simpleicons: rss

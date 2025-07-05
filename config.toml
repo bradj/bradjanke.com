@@ -1,59 +1,561 @@
-baseurl = "https://bradjanke.com/"
-title = "Brad Janke"
-theme = "pulp"
-canonifyurls = true
+baseURL = "https://bradjanke.com/"
+
+# Theme
+theme = "LoveIt"
+
+# Website title
+title = "bradjanke"
+
+# Language settings
+defaultContentLanguage = "en"
+languageCode = "en"
+languageName = "English"
 hasCJKLanguage = true
-# pygmentsCodefences = true
-# pygmentsUseClasses = true
-# googleAnalytics = "{your tracking code}"
 
-[markup.goldmark.renderer]
-    unsafe = false # Allow user HTML tags
+# Enable features
+enableRobotsTXT = true
+enableGitInfo = false
+enableEmoji = true
 
+# Build settings
+canonifyurls = true
+
+# Copyright info
+copyright = "© 2025 Brad Janke"
+
+# Pagination config
+[pagination]
+  pagerSize = 10
+
+# Markup settings
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+
+# Author config
+[author]
+  name = "brad"
+  email = ""
+  link = ""
+
+# Menu config
+[menu]
+  [[menu.main]]
+    weight = 1
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    title = ""
+  [[menu.main]]
+    weight = 2
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    title = ""
+#   [[menu.main]]
+#     weight = 2
+#     identifier = "tags"
+#     name = "Tags"
+#     url = "/tags/"
+#     title = ""
+#   [[menu.main]]
+#     weight = 3
+#     identifier = "categories"
+#     name = "Categories"
+#     url = "/categories/"
+#     title = ""
+  [[menu.main]]
+    weight = 4
+    identifier = "resume"
+    name = "Resume"
+    url = "/resume/"
+    title = ""
+
+# Params section
 [params]
-    author = "Brad Janke"
-    avatar = "headshot.jpg"
-    # avatarDescription = "My avatar description"
-    favicon = "favicon.ico"
-    description = """
-        Infrastructure, ramblings, and software.
+  # Site default theme ["auto", "light", "dark"]
+  defaulttheme = "auto"
+  # Which hash function used for SRI ["sha256", "sha384", "sha512", "md5"]
+  fingerprint = ""
+  # Date format
+  dateFormat = "2006-01-02"
+  # Website title for Open Graph and Twitter Cards
+  title = "bradjanke"
+  # Website description for RSS, SEO, Open Graph and Twitter Cards
+  description = "cloud infrastructure, ramblings, and software"
+  # Website images for Open Graph and Twitter Cards
+  images = ["/headshot.jpg"]
 
-    """
-    publicationYear = "2022"
-    # listPageDateFormat = "January, 2006" # See https://gohugo.io/functions/format/
-    # singlePageDateFormat = "January 2, 2006"
-    # custom_css = ["/css/custom.css"]
-    # custom_js = ["/js/custom.js"]
+  # Author config
+  [params.author]
+    name = "bradj"
+    email = ""
+    link = ""
 
-# Make sure setting a following option for search bar to work
+  # Header config
+  [params.header]
+    # Desktop header mode ["fixed", "normal", "auto"]
+    desktopMode = "fixed"
+    # Mobile header mode ["fixed", "normal", "auto"]
+    mobileMode = "auto"
+    # Header title config
+    [params.header.title]
+      # URL of the LOGO
+      logo = ""
+      # Title name
+      name = "bradjanke"
+      # You can add extra information before the name (HTML format is supported)
+      pre = ""
+      # You can add extra information after the name (HTML format is supported)
+      post = ""
+      # Whether to use typeit animation for title name
+      typeit = false
+
+  # Footer config
+  [params.footer]
+    enable = false
+    # Custom content (HTML format is supported)
+    custom = ""
+    # Whether to show Hugo and theme info
+    hugo = false
+    # Whether to show copyright info
+    copyright = true
+    # Whether to show the author
+    author = false
+    # Site creation time
+    since = 2022
+    # ICP info only in China (HTML format is supported)
+    icp = ""
+    # License info (HTML format is supported)
+    license = ""
+
+  # Section (all posts) page config
+  [params.section]
+    # Special amount of posts in each section page
+    paginate = 20
+    # Date format (month and day)
+    dateFormat = "01-02"
+    # Amount of RSS pages
+    rss = 10
+
+  # List (category or tag) page config
+  [params.list]
+    # Special amount of posts in each list page
+    paginate = 20
+    # Date format (month and day)
+    dateFormat = "01-02"
+    # Amount of RSS pages
+    rss = 10
+
+  # App icon config
+  [params.app]
+    # Optional site title override for the app when added to an iOS home screen or Android launcher
+    title = "bradjanke"
+    # Whether to omit favicon resource links
+    noFavicon = false
+    # Modern SVG favicon to use in place of older style .png and .ico files
+    svgFavicon = ""
+    # Android browser theme color
+    themeColor = "#ffffff"
+    # Safari mask icon color
+    iconColor = "#5bbad5"
+    # Windows v8-11 tile color
+    tileColor = "#da532c"
+
+  # Search config
+  [params.search]
+    enable = false
+    # Type of search engine ["lunr", "algolia"]
+    type = "lunr"
+    # Max index length of the chunked content
+    contentLength = 4000
+    # Placeholder of the search bar
+    placeholder = ""
+    # Max number of results length
+    maxResultLength = 10
+    # Snippet length of the result
+    snippetLength = 30
+    # HTML tag name of the highlight part in results
+    highlightTag = "em"
+    # Whether to use the absolute URL based on the baseURL in search index
+    absoluteURL = false
+
+  # Home page config
+  [params.home]
+    # Amount of RSS pages
+    rss = 10
+    # Home page profile
+    [params.home.profile]
+      enable = true
+      # Gravatar Email for preferred avatar in home page
+      gravatarEmail = ""
+      # URL of avatar shown in home page
+      avatarURL = "/headshot.jpg"
+      # Title shown in home page (HTML format is supported)
+      title = ""
+      # Subtitle shown in home page (HTML format is supported)
+      subtitle = "cloud infrastructure • ramblings • software"
+      # Whether to use typeit animation for subtitle
+      typeit = false
+      # Whether to show social links
+      social = true
+      # Disclaimer (HTML format is supported)
+      disclaimer = ""
+    # Home page posts
+    [params.home.posts]
+      enable = true
+      # Special amount of posts in each home posts page
+      paginate = 6
+
+  # Social config about the author
+  [params.social]
+    GitHub = "bradj"
+    Linkedin = ""
+    # X = "bradjanke"
+    Bluesky = "bradjanke.bsky.social"
+    Instagram = ""
+    Facebook = ""
+    Telegram = ""
+    Medium = ""
+    Gitlab = ""
+    Youtubelegacy = ""
+    Youtubecustom = ""
+    Youtubechannel = ""
+    Tumblr = ""
+    Quora = ""
+    Keybase = "bradj"
+    Pinterest = ""
+    Reddit = ""
+    Codepen = ""
+    FreeCodeCamp = ""
+    Bitbucket = ""
+    Stackoverflow = ""
+    Weibo = ""
+    Odnoklassniki = ""
+    VK = ""
+    Flickr = ""
+    Xing = ""
+    Snapchat = ""
+    Soundcloud = ""
+    Spotify = ""
+    Bandcamp = ""
+    Paypal = ""
+    Fivehundredpx = ""
+    Mix = ""
+    Goodreads = ""
+    Lastfm = ""
+    Foursquare = ""
+    Hackernews = ""
+    Kickstarter = ""
+    Patreon = ""
+    Steam = ""
+    Twitch = ""
+    Strava = ""
+    Skype = ""
+    Whatsapp = ""
+    Zhihu = ""
+    Douban = ""
+    Angellist = ""
+    Slidershare = ""
+    Jsfiddle = ""
+    Deviantart = ""
+    Behance = ""
+    Dribbble = ""
+    Wordpress = ""
+    Vine = ""
+    Googlescholar = ""
+    Researchgate = ""
+    Mastodon = "bradj"
+    Thingiverse = ""
+    Devto = ""
+    Gitea = ""
+    XMPP = ""
+    Matrix = ""
+    Bilibili = ""
+    Discord = ""
+    DiscordInvite = ""
+    Lichess = ""
+    ORCID = ""
+    Pleroma = ""
+    Kaggle = ""
+    MediaWiki= ""
+    Plume = ""
+    HackTheBox = ""
+    RootMe= ""
+    Email = ""
+    Phone = ""
+    RSS = false
+
+  # Comment config
+  [params.comment]
+    enable = false
+
+  # Page global config
+  [params.page]
+    # Whether to hide a page from home page
+    hiddenFromHomePage = false
+    # Whether to hide a page from search results
+    hiddenFromSearch = false
+    # Whether to enable twemoji
+    twemoji = false
+    # Whether to enable lightgallery
+    lightgallery = false
+    # Whether to enable the ruby extended syntax
+    ruby = true
+    # Whether to enable the fraction extended syntax
+    fraction = true
+    # Whether to enable the fontawesome extended syntax
+    fontawesome = true
+    # Whether to show link to Raw Markdown content of the content
+    linkToMarkdown = true
+    # Whether to show the full text content in RSS
+    rssFullText = false
+    # Table of the contents config
+    [params.page.toc]
+      # Whether to enable the table of the contents
+      enable = true
+      # Whether to keep the static table of the contents in front of the post
+      keepStatic = false
+      # Whether to make the table of the contents in the sidebar automatically collapsed
+      auto = true
+    # Code config
+    [params.page.code]
+      # Whether to show the copy button of the code block
+      copy = true
+      # The maximum number of lines of displayed code by default
+      maxShownLines = 50
+    # KaTeX mathematical formulas config (KaTeX https://katex.org/)
+    [params.page.math]
+      enable = false
+      # Default inline delimiter is $ ... $ and \( ... \)
+      inlineLeftDelimiter = ""
+      inlineRightDelimiter = ""
+      # Default block delimiter is $$ ... $$, \[ ... \], \begin{equation} ... \end{equation} and some other functions
+      blockLeftDelimiter = ""
+      blockRightDelimiter = ""
+      # KaTeX extension copy_tex
+      copyTex = true
+      # KaTeX extension mhchem
+      mhchem = true
+    # Mapbox GL JS config (Mapbox GL JS https://docs.mapbox.com/mapbox-gl-js)
+    [params.page.mapbox]
+      # Access token of Mapbox GL JS
+      accessToken = ""
+      # Style for the light theme
+      lightStyle = "mapbox://styles/mapbox/light-v10?optimize=true"
+      # Style for the dark theme
+      darkStyle = "mapbox://styles/mapbox/dark-v10?optimize=true"
+      # Whether to add NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
+      navigation = true
+      # Whether to add GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
+      geolocate = true
+      # Whether to add ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
+      scale = true
+      # Whether to add FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
+      fullscreen = true
+    # Social share links in post page
+    [params.page.share]
+      enable = false
+      X = false
+      Facebook = false
+      Linkedin = false
+      Whatsapp = false
+      Pinterest = false
+      Tumblr = false
+      HackerNews = false
+      Reddit = false
+      VK = false
+      Buffer = false
+      Xing = false
+      Line = false
+      Instapaper = false
+      Pocket = false
+      Flipboard = false
+      Weibo = false
+      Blogger = false
+      Baidu = false
+      Odnoklassniki = false
+      Evernote = false
+      Skype = false
+      Trello = false
+      Mix = false
+    # Comment config
+    [params.page.comment]
+      enable = false
+      # Disqus comment config (https://disqus.com/)
+      [params.page.comment.disqus]
+        enable = false
+        # Disqus shortname to use Disqus in posts
+        shortname = ""
+      # Gitalk comment config (https://github.com/gitalk/gitalk)
+      [params.page.comment.gitalk]
+        enable = false
+        owner = ""
+        repo = ""
+        clientId = ""
+        clientSecret = ""
+      # Valine comment config (https://github.com/xCss/Valine)
+      [params.page.comment.valine]
+        enable = false
+        appId = ""
+        appKey = ""
+        placeholder = ""
+        avatar = "mp"
+        meta= ""
+        pageSize = 10
+        # Automatically adapt the current theme i18n configuration when empty
+        lang = ""
+        visitor = true
+        recordIP = true
+        highlight = true
+        enableQQ = false
+        serverURLs = ""
+        # emoji data file name, default is "google.yml"
+        # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
+        # Located in "themes/LoveIt/assets/lib/valine/emoji/" directory
+        # You can store your own data files in the same path under your project:
+        # "assets/lib/valine/emoji/"
+        emoji = ""
+      # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
+      [params.page.comment.facebook]
+        enable = false
+        width = "100%"
+        numPosts = 10
+        appId = ""
+        # Automatically adapt the current theme i18n configuration when empty
+        languageCode = ""
+      # Telegram comments config (https://comments.app/)
+      [params.page.comment.telegram]
+        enable = false
+        siteID = ""
+        limit = 5
+        height = ""
+        color = ""
+        colorful = true
+        dislikes = false
+        outlined = false
+      # Commento comment config (https://commento.io/)
+      [params.page.comment.commento]
+        enable = false
+      # utterances comment config (https://utteranc.es/)
+      [params.page.comment.utterances]
+        enable = false
+        # owner/repo
+        repo = ""
+        issueTerm = "pathname"
+        label = ""
+        lightTheme = "github-light"
+        darkTheme = "github-dark"
+      # giscus comment config (https://giscus.app/)
+      [params.page.comment.giscus]
+        # You can refer to the official documentation of giscus to use the following configuration.
+        enable = false
+        repo = ""
+        repoId = ""
+        category = "Announcements"
+        categoryId = ""
+        # Automatically adapt the current theme i18n configuration when empty
+        lang = ""
+        mapping = "pathname"
+        reactionsEnabled = "1"
+        emitMetadata = "0"
+        inputPosition = "bottom"
+        lazyLoading = false
+        lightTheme = "light"
+        darkTheme = "dark"
+    # Third-party library config
+    [params.page.library]
+      [params.page.library.css]
+        # someCSS = "some.css"
+        # Located in "assets/" Or "https://cdn.example.com/some.css"
+      [params.page.library.js]
+        # someJavascript = "some.js"
+        # Located in "assets/" Or "https://cdn.example.com/some.js"
+    # Page SEO config
+    [params.page.seo]
+      # Image URL
+      images = []
+      # Publisher info
+      [params.page.seo.publisher]
+        name = ""
+        logoUrl = ""
+
+  # TypeIt config
+  [params.typeit]
+    # Typing speed between each step (measured in milliseconds)
+    speed = 100
+    # Blinking speed of the cursor (measured in milliseconds)
+    cursorSpeed = 1000
+    # Character used for the cursor (HTML format is supported)
+    cursorChar = "|"
+    # Cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
+    duration = -1
+
+  # Site verification code for Google/Bing/Yandex/Pinterest/Baidu
+  [params.verification]
+    google = ""
+    bing = ""
+    yandex = ""
+    pinterest = ""
+    baidu = ""
+
+  # Site SEO config
+  [params.seo]
+    # Image URL
+    image = ""
+    # Thumbnail URL
+    thumbnailUrl = ""
+
+  # Analytics config
+  [params.analytics]
+    enable = false
+    # Google Analytics
+    [params.analytics.google]
+      id = ""
+      # Whether to anonymize IP
+      anonymizeIP = true
+    # Fathom Analytics
+    [params.analytics.fathom]
+      id = ""
+      # Server url for your custom domain
+      server = ""
+    # Plausible Analytics
+    [params.analytics.plausible]
+      dataDomain = ""
+    # Yandex Metrica
+    [params.analytics.yandexMetrica]
+      id = ""
+
+  # Cookie consent config
+  [params.cookieconsent]
+    enable = false
+    # Text strings used for Cookie consent banner
+    [params.cookieconsent.content]
+      message = ""
+      dismiss = ""
+      link = ""
+
+  # CDN config for third-party library files
+  [params.cdn]
+    # CDN data file name, disabled by default
+    # ["jsdelivr.yml"]
+    # Located in "themes/LoveIt/assets/data/cdn/" directory
+    # You can store your own data files in the same path under your project:
+    # "assets/data/cdn/"
+    data = ""
+
+  # Compatibility config
+  [params.compatibility]
+    # Whether to use Polyfill.io to be compatible with older browsers
+    polyfill = false
+    # Whether to use object-fit-images to be compatible with older browsers
+    objectFit = false
+
+# Outputs needed for search functionality
 [outputs]
-    section = ["JSON", "HTML"]
-    term = ["JSON", "HTML"]
-
-[[menu.main]]
-    identifier = "about"
-    name = "about" #If display text link, cancel comment out
-    pre = "<i class='fa fa-user fa-lg'></i>" #Choose your favorite font from Font Awesome
-    url = "/about/"
-    weight = 10
-
-[[menu.main]]
-    identifier = "github"
-    name = "github"
-    pre = "<i class='fab fa-github fa-lg'></i>"
-    url = "https://github.com/bradj"
-    weight = 20
-
-[[menu.main]]
-    identifier = "keybase"
-    name = "keybase"
-    pre = "<i class='fab fa-keybase fa-lg'></i>"
-    url = "https://keybase.io/bradj"
-    weight = 30
-
-[[menu.main]]
-    identifier = "twitter"
-    name = "twitter"
-    pre = "<i class='fab fa-twitter fa-lg'></i>"
-    url = "https://twitter.com/bradjanke"
-    weight = 30
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML"]

@@ -4,7 +4,7 @@
 
 ## Requirements
 
-1. [Hugo](https://gohugo.io/getting-started/quick-start/)
+1. [Hugo v0.145.0](https://gohugo.io/getting-started/quick-start/)
 
 ## Usage
 
