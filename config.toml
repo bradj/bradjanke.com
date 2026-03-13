@@ -47,12 +47,12 @@ copyright = "© 2025 Brad Janke"
     name = "Home"
     url = "/"
     title = ""
-  [[menu.main]]
-    weight = 2
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts/"
-    title = ""
+#  [[menu.main]]
+#    weight = 2
+#    identifier = "posts"
+#    name = "Posts"
+#    url = "/posts/"
+#    title = ""
 #   [[menu.main]]
 #     weight = 2
 #     identifier = "tags"
