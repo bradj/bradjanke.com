@@ -5,17 +5,15 @@ draft: false
 tags: []
 ---
 
-I architect and deliver systems end-to-end — from infrastructure to product. I'm most useful when a problem spans your entire stack and someone needs to own it.
+I build and deliver systems end-to-end from infrastructure to product. I'm most useful when a problem spans your entire stack and someone needs to own it.
 
-- End-to-end system architecture and implementation (frontend, APIs, workers, databases, infrastructure)
-- Technical leadership and growing engineering teams
-- Infrastructure management (AWS, Terraform)
+- Technical leadership involving growing teams, on-call discipline, post-mortems, mentorship
+- End-to-end architecture and implementation across frontend, APIs, workers, databases, and infrastructure (AWS, Terraform)
+- AI engineering pipelines that let small teams ship at scale
 
-AI-Assisted Development
+AI Engineering:
 
-- Transitioning to fully agentic development workflows using Claude Code for architecture, implementation, and iteration across production codebases
-- Developed a structured AI development methodology — layered context establishment, planning, implementation, and automated auditing — to maintain consistency at scale
-- Built automated audit workflows that detect drift between implementation and architectural intent, triggering review cycles before technical debt accumulates
+I design and operate AI-assisted development pipelines built around the guardrails, retry loops, and audit systems that turn LLM agents into a dependable part of an engineering workflow.
 
 # Experience
 
@@ -23,14 +21,16 @@ AI-Assisted Development
 
 December 2023 – Present
 
-- Partnered with Product, Design, and Operations to translate ambiguous problem spaces into scalable technical solutions
-- Inherited a broken scheduling system affecting thousands of daily operations. Reimplemented it end-to-end — frontend through database — shipping incrementally with zero data loss
-- Designed and delivered a real-time nurse-opportunity matching system using Go and gRPC across multiple services
-- Migrated the platform from EKS to ECS with zero service interruption, then rebuilt CI/CD with GitHub Actions to cut deployments from hours to minutes
-- Reduced MySQL response times 60% through read replica architecture and query optimization with zero downtime
-- Owned incident response and led post-mortems that drove lasting reliability improvements and established on-call practices and runbooks for production services
-- Mentored engineers via 1:1's, reviews, and feedback sessions
-- Authored and presented ADRs for major backend and infra directional shifts
+- Architected an AI engineering pipeline end-to-end including a deterministic harness that steers and gates LLM-based implementation, plus scheduled audit agents that sweep the repo for drift between context and implementation.
+- Designed and established context with engineering standards throughout the repo to help steer agents.
+- Automated context drift detection that alerts engineers via PRs to drift between established context and implementation.
+- Deterministic gates inspect the AST and leverage a suite of custom linting rules to ensure patterns are maintained. Gates return structured errors (file, line, message) that feed directly into retry prompts so the agent corrects the specific failure in fewer iterations.
+- Improved harness success rate on legacy code/tech debt by scoping gates down to the modified code.
+- Inherited a broken scheduling system affecting thousands of daily operations. Reimplemented it end-to-end with zero data loss.
+- Built a real-time nurse-opportunity matching system using Go and gRPC across multiple services.
+- Migrated the platform from EKS to ECS with zero service interruption, then rebuilt CI/CD with GitHub Actions to cut deployments from hours to minutes.
+- Owned incident response and led post-mortems that drove lasting reliability improvements and established on-call practices and runbooks for production services.
+- Mentored engineers via 1:1's, reviews, and feedback sessions.
 
 ## MTN Development LLC — Owner
 
