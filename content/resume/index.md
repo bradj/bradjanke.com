@@ -5,15 +5,14 @@ draft: false
 tags: []
 ---
 
-I build and deliver systems end-to-end from infrastructure to product. I'm most useful when a problem spans your entire stack and someone needs to own it.
+I architect and deliver systems from infrastructure to product. I'm most useful while owning problems that span the entire stack.
 
-- Technical leadership involving growing teams, on-call discipline, post-mortems, mentorship
-- End-to-end architecture and implementation across frontend, APIs, workers, databases, and infrastructure (AWS, Terraform)
-- AI engineering pipelines that let small teams ship at scale
+Nearly 20 years of pre-AI experience that I use to guide agentic workflows.
 
-AI Engineering:
-
-I design and operate AI-assisted development pipelines built around the guardrails, retry loops, and audit systems that turn LLM agents into a dependable part of an engineering workflow.
+- End-to-end system architecture and implementation (frontend, APIs, workers, databases, infrastructure)
+- AI-assisted development systems: harness engineering, agent orchestration, deterministic guardrails, automated auditing
+- Technical leadership and growing engineering teams
+- Infrastructure management (AWS, Terraform)
 
 # Experience
 
@@ -21,16 +20,16 @@ I design and operate AI-assisted development pipelines built around the guardrai
 
 December 2023 – Present
 
-- Architected an AI engineering pipeline end-to-end including a deterministic harness that steers and gates LLM-based implementation, plus scheduled audit agents that sweep the repo for drift between context and implementation.
-- Designed and established context with engineering standards throughout the repo to help steer agents.
-- Automated context drift detection that alerts engineers via PRs to drift between established context and implementation.
-- Deterministic gates inspect the AST and leverage a suite of custom linting rules to ensure patterns are maintained. Gates return structured errors (file, line, message) that feed directly into retry prompts so the agent corrects the specific failure in fewer iterations.
-- Improved harness success rate on legacy code/tech debt by scoping gates down to the modified code.
-- Inherited a broken scheduling system affecting thousands of daily operations. Reimplemented it end-to-end with zero data loss.
-- Built a real-time nurse-opportunity matching system using Go and gRPC across multiple services.
-- Migrated the platform from EKS to ECS with zero service interruption, then rebuilt CI/CD with GitHub Actions to cut deployments from hours to minutes.
-- Owned incident response and led post-mortems that drove lasting reliability improvements and established on-call practices and runbooks for production services.
-- Mentored engineers via 1:1's, reviews, and feedback sessions.
+- Built the harness and orchestrator that routes agents through ordered deterministic guardrails
+- Wrote AST-based guardrails and custom linting rules to deterministically enforce architecture and coding standards
+- Improved harness success rate on legacy code/tech debt by scoping gates down to the modified code
+- Enabled non-engineering product and data team members to ship code and fixes through the harness and orchestrator
+- Used the orchestrator to rebuild the scheduling system and automated offers in 1 month; automated offers originally took 3 months, and a scheduling rewrite had previously been considered infeasible
+- Designed and delivered a real-time nurse-opportunity matching system using Go and gRPC across multiple services
+- Migrated the platform from EKS to ECS, then rebuilt CI/CD with GitHub Actions to cut deployments from hours to minutes
+- Reduced MySQL response times 60% through read replica architecture and query optimization
+- Owned incident response and led post-mortems that drove lasting reliability improvements and established on-call practices and runbooks
+- Mentored engineers via 1:1s, reviews, and feedback sessions
 
 ## MTN Development LLC — Owner
 
@@ -45,7 +44,8 @@ February 2017 – Ongoing
 
 March 2023 – August 2023
 
-- Brought in to build a Cloud Engineering practice from scratch — defined hiring process, interview criteria, and onboarding documentation alongside leadership and recruiting
+- Brought in to build a Cloud Engineering practice from scratch
+- Defined hiring process, interview criteria, and onboarding documentation alongside leadership and recruiting
 - Built an Azure subscription vending pipeline using GitOps and Terraform, replacing a manual ticket-based process for the engineering team
 - Embedded with struggling client engagements as a subject matter expert to identify gaps, provide training, and get projects back on track
 
@@ -54,19 +54,21 @@ March 2023 – August 2023
 April 2022 – March 2023
 
 - Redesigned the platform architecture from single-tenant to multi-tenant, implementing changes across backend services, Kubernetes operator, Argo CD, React frontend, and database
-- Replaced a self-managed Dex identity provider with Auth0 and designed self-service account registration, removing manual onboarding bottlenecks
-- Cut deployment time from over an hour to roughly five minutes by replacing manual processes with GitHub Actions and automated Helm chart deployments across all repositories
+- Replaced a self-managed Dex identity provider with Auth0 and designed self-service account registration, replacing manual onboarding
+- Cut deployment time from over an hour to roughly five minutes by replacing manual processes with GitHub Actions and automated Helm chart deployments
 
 ## Optum — Lead Software Engineer
 
 June 2020 – February 2021
 
-- Designed and led implementation of an event-driven PII data ingestion and validation platform on Azure using Data Factory, Databricks, and Azure Functions. Non-technical users managed client configurations directly, keeping engineering focused on the platform.
+- Designed and led implementation of an event-driven PII data ingestion and validation platform on Azure using Data Factory, Databricks, and Azure Functions
 - Built serverless validation pipelines processing hundreds of gigabytes per batch, with Spark handling row-level validation across the Databricks cluster
 - Spearheaded Terraform adoption talks across an engineering organization of 600+ engineers during their migration from on-prem to Azure
-- Acted as Scrum Master, Project Manager, and Engineering Lead on a team of five
+- Engineering Lead on a team of five
 
-## Earlier Roles
+## Earlier Roles 
+
+Details available on request
 
 - **LiveSchool** — Senior Backend Engineer (February 2019 – March 2020)
 - **Contino** — Senior DevOps Consultant (October 2018 – February 2019)
