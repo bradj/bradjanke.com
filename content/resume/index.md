@@ -1,8 +1,8 @@
 ---
-title: "Resume"
-date: 2025-07-05T00:40:24-05:00
-draft: false
-tags: []
+title: "Brad Janke"
+type: resume
+subtitle: "Staff Software Engineer · Full Stack / Infrastructure"
+contact: []
 ---
 
 I architect and deliver systems from infrastructure to product. I'm most useful while owning problems that span the entire stack.
