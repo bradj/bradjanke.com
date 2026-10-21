@@ -10,8 +10,10 @@ I architect and deliver systems from infrastructure to product. I'm most useful 
 Nearly 20 years of pre-AI experience that I use to guide agentic workflows.
 
 - End-to-end system architecture and implementation (frontend, APIs, workers, databases, infrastructure)
+- Platform enablement: shared tooling, engineering standards, and guardrails that let product teams ship safely
 - AI-assisted development systems: harness engineering, agent orchestration, deterministic guardrails, automated auditing
-- Technical leadership and growing engineering teams
+- Healthcare and regulated data: PII pipelines, SOC 2 and HIPAA compliance
+- Technical leadership, mentoring, and growing engineering teams
 - Infrastructure management (AWS, Terraform)
 
 # Experience
@@ -37,6 +39,7 @@ February 2017 – Ongoing
 
 - Ran independent consulting practice focused on AWS infrastructure and Terraform adoption. Managed multiple concurrent client engagements from discovery through delivery
 - Contributed to open source Terraform modules at Cloud Posse, building reusable patterns for cloud transformation on AWS
+- Stood up SOC 2 and HIPAA compliance programs in Vanta for startup clients, including a healthcare startup, and wrote and customized their security policies
 - Brought clients from zero Terraform experience to self-sufficient — delivering production infrastructure while training their engineers to maintain it
 - Rebuilt fragmented CI/CD pipelines across client organizations, replacing manual processes with automated builds and deployments via Jenkins and GitHub Actions
 
