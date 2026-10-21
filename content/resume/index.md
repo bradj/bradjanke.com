@@ -20,13 +20,13 @@ Nearly 20 years of pre-AI experience that I use to guide agentic workflows.
 
 December 2023 – Present
 
-- Built the harness and orchestrator that routes agents through ordered deterministic guardrails
-- Wrote AST-based guardrails and custom linting rules to deterministically enforce architecture and coding standards
-- Improved harness success rate on legacy code/tech debt by scoping gates down to the modified code
-- Enabled non-engineering product and data team members to ship code and fixes through the harness and orchestrator
-- Used the orchestrator to rebuild the scheduling system and automated offers in 1 month; automated offers originally took 3 months, and a scheduling rewrite had previously been considered infeasible
+- Designed, architected, and built Float's AI engineering platform end to end as its sole engineer: agent harness, context system, and an orchestrator that routes agents through ordered deterministic guardrails across the entire codebase
+- Delivered the platform as an internal product that enables non-technical product and data team members to safely ship working features and fixes to production
+- Wrote AST-based guardrails and custom linting rules to deterministically enforce architecture and coding standards on every agent change
+- Improved agent success rate on legacy code/tech debt by scoping guardrails down to the modified code
+- Used the AI platform to rebuild the scheduling system and automated offers in 1 month; automated offers originally took 3 months, and a scheduling rewrite had previously been considered infeasible
 - Designed and delivered a real-time nurse-opportunity matching system using Go and gRPC across multiple services
-- Migrated the platform from EKS to ECS, then rebuilt CI/CD with GitHub Actions to cut deployments from hours to minutes
+- Migrated from EKS to ECS, then rebuilt CI/CD with GitHub Actions to cut deployments from hours to minutes
 - Reduced MySQL response times 60% through read replica architecture and query optimization
 - Owned incident response and led post-mortems that drove lasting reliability improvements and established on-call practices and runbooks
 - Mentored engineers via 1:1s, reviews, and feedback sessions
